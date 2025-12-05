@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anisa Bhayani - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Playfair+Display+SC:wght@400&family=Josefin+Slab:wght@400;600&family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Josefin Slab', serif;
+            background-color: #fcf9ee;
+        }
+
+        .portfolio-container {
+            background-color: #fcf9ee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+            padding-bottom: 150px;
+            gap: 10px;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #264732;
+            height: 97px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-content {
+            display: flex;
+            gap: 10px;
+            height: 97px;
+            align-items: start;
+            justify-content: center;
+            padding: 10px 120px;
+            width: 100%;
+        }
+
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            justify-content: center;
+            height: 100%;
+            color: #fefad5;
+            font-size: 36px;
+            text-align: center;
+            line-height: 125px;
+        }
+
+        .ab-image-container {
+            flex: 1;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            min-height: 1px;
+            min-width: 1px;
+        }
+
+        .ab-image {
+            width: 78px;
+            height: 78px;
+            position: relative;
+        }
+
+        .ab-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            height: 700px;
+            align-items: start;
+            overflow: hidden;
+            width: 1200px;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+            align-items: start;
+            justify-content: center;
+            padding: 10px 0;
+            color: #292929;
+            width: 653px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display SC', serif;
+            line-height: 125px;
+            font-size: 128px;
+            white-space: pre;
+        }
+
+        .hero-description {
+            font-family: 'Josefin Slab', serif;
+            font-weight: 400;
+            height: 144px;
+            line-height: normal;
+            font-size: 34px;
+            width: 626px;
+        }
+
+        .hero-right {
+            flex: 1;
+            height: 100%;
+            min-height: 1px;
+            min-width: 1px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-image {
+            position: absolute;
+            left: -68px;
+            width: 679px;
+            height: 679px;
+            top: 10px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        .hero-placeholder-text {
+            position: absolute;
+            font-family: 'Josefin Slab', serif;
+            font-weight: 400;
+            line-height: normal;
+            left: 156px;
+            font-size: 22px;
+            color: black;
+            white-space: pre;
+            top: 373px;
+        }
+
+        .hero-vector {
+            position: absolute;
+            height: 434.5px;
+            left: 149px;
+            top: 132px;
+            width: 245px;
+        }
+
+        .hero-vector img {
+            display: block;
+            max-width: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* About Me Section */
+        .about-section {
+            height: 786px;
+            width: 1200px;
+            position: relative;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 150px;
+            height: 786px;
+            align-items: start;
+            overflow: hidden;
+            padding: 35px 0;
+            width: 1200px;
+        }
+
+        .about-section::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-top: 1px solid rgba(38, 71, 50, 0.6);
+            pointer-events: none;
+        }
+
+        .about-left {
+            display: flex;
+            flex-direction: column;
+            gap: 33px;
+            align-items: start;
+            width: 507px;
+        }
+
+        .about-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: normal;
+            color: #264732;
+            font-size: 46px;
+            white-space: pre;
+        }
+
+        .about-subtitle {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            font-size: 22px;
+            color: black;
+            white-space: pre;
+        }
+
+        .about-photos {
+            height: 514px;
+            width: 100%;
+            position: relative;
+        }
+
+        .photo-frame-1 {
+            position: absolute;
+            display: flex;
+            height: 360.438px;
+            align-items: center;
+            justify-content: center;
+            left: 187px;
+            top: 3px;
+            width: 319.638px;
+        }
+
+        .photo-frame-1-inner {
+            transform: rotate(11.303deg);
+        }
+
+        .photo-1 {
+            height: 315px;
+            width: 263px;
+            position: relative;
+        }
+
+        .photo-1-img-wrapper {
+            position: absolute;
+            height: 295px;
+            left: 0;
+            pointer-events: none;
+            top: 10px;
+            width: 249px;
+        }
+
+        .photo-1-img-wrapper img {
+            position: absolute;
+            inset: 0;
+            max-width: none;
+            object-fit: cover;
+            object-position: 50% 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .photo-1-img-wrapper::after {
+            content: '';
+            position: absolute;
+            border: 4px solid white;
+            inset: 0;
+            box-shadow: 4px 5px 7.8px 0px rgba(21, 32, 25, 0.17);
+        }
+
+        .photo-frame-2 {
+            position: absolute;
+            display: flex;
+            height: 323.415px;
+            align-items: center;
+            justify-content: center;
+            left: 11.93px;
+            top: 144.79px;
+            width: 273.139px;
+        }
+
+        .photo-frame-2-inner {
+            transform: rotate(358.13deg);
+        }
+
+        .photo-2 {
+            height: 315px;
+            width: 263px;
+            position: relative;
+        }
+
+        .photo-2-img-wrapper {
+            position: absolute;
+            height: 295px;
+            left: 6.75px;
+            pointer-events: none;
+            top: 9.98px;
+            width: 249px;
+        }
+
+        .photo-2-img-wrapper img {
+            position: absolute;
+            inset: 0;
+            max-width: none;
+            object-fit: cover;
+            object-position: 50% 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .photo-2-img-wrapper::after {
+            content: '';
+            position: absolute;
+            border: 4px solid white;
+            inset: 0;
+            box-shadow: 4px 5px 7.8px 0px rgba(21, 32, 25, 0.17);
+        }
+
+        .about-right {
+            height: 749px;
+            overflow: hidden;
+            width: 608px;
+            position: relative;
+        }
+
+        .about-greeting {
+            position: absolute;
+            font-family: 'Playfair Display SC', serif;
+            line-height: 125px;
+            left: 0;
+            color: #292929;
+            font-size: 75px;
+            white-space: pre;
+            top: 58px;
+        }
+
+        .about-role {
+            position: absolute;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            left: 0;
+            font-size: 22px;
+            color: black;
+            white-space: pre;
+            top: 222px;
+        }
+
+        .about-bio {
+            position: absolute;
+            font-family: 'Josefin Slab', serif;
+            font-weight: 400;
+            height: 467px;
+            line-height: 28px;
+            left: 0;
+            color: #292929;
+            font-size: 27px;
+            top: 282px;
+            width: 560px;
+        }
+
+        .about-bio a {
+            color: #292929;
+            text-decoration: underline;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+        /* Location Section */
+        .location-section {
+            display: flex;
+            gap: 10px;
+            height: 130px;
+            align-items: start;
+            justify-content: center;
+            overflow: hidden;
+            padding: 32px 0 0 0;
+            width: 1200px;
+        }
+
+        .location-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 38px 20px;
+        }
+
+        .location-text {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            color: #264732;
+            font-size: 22px;
+            text-align: center;
+            width: 250px;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 809px;
+            align-items: start;
+            overflow: hidden;
+            padding: 20px 0 10px 0;
+            width: 100%;
+        }
+
+        .quote-content {
+            height: 705px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .quote-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .quote-bg img {
+            position: absolute;
+            max-width: none;
+            object-fit: cover;
+            object-position: 50% 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .quote-overlay {
+            position: absolute;
+            background-color: rgba(38, 71, 50, 0.08);
+            inset: 0;
+        }
+
+        .quote-text {
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            line-height: normal;
+            left: 50%;
+            color: #fefad5;
+            font-size: 96px;
+            text-align: center;
+            top: 161px;
+            transform: translateX(-50%);
+            width: 820px;
+        }
+
+        .quote-author {
+            position: absolute;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            left: 1071px;
+            color: #fefad5;
+            font-size: 40px;
+            text-align: center;
+            white-space: pre;
+            top: 568px;
+            transform: translateX(-50%);
+        }
+
+        /* Works Section */
+        .works-section {
+            width: 1200px;
+            position: relative;
+        }
+
+        .works-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: start;
+            overflow: hidden;
+            padding: 35px 0;
+            width: 1200px;
+        }
+
+        .works-section::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-top: 1px solid rgba(38, 71, 50, 0.6);
+            pointer-events: none;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: normal;
+            color: #264732;
+            font-size: 46px;
+            white-space: pre;
+        }
+
+        .work-item {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 80px;
+        }
+
+        .work-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .work-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .work-image-container {
+            flex: 1;
+            height: 350px;
+            min-width: 500px;
+        }
+
+        .work-image {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .work-image img {
+            display: block;
+            max-width: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .work-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            gap: 22px;
+            line-height: normal;
+            color: black;
+        }
+
+        .work-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+        }
+
+        .work-text {
+            font-family: 'Josefin Slab', serif;
+            font-size: 27px;
+            line-height: 1.4;
+        }
+
+        /* Volunteering Section */
+        .volunteering-section {
+            width: 1200px;
+            position: relative;
+        }
+
+        .volunteering-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: start;
+            overflow: hidden;
+            padding: 35px 0;
+            width: 1200px;
+        }
+
+        .volunteering-section::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-top: 1px solid rgba(38, 71, 50, 0.6);
+            pointer-events: none;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            height: 121px;
+            width: 1200px;
+            position: relative;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            height: 121px;
+            align-items: start;
+            overflow: hidden;
+            padding: 35px 0;
+            width: 1200px;
+        }
+
+        .contact-section::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-top: 1px solid rgba(38, 71, 50, 0.6);
+            pointer-events: none;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #264732;
+            height: 357px;
+            width: 1796px;
+            position: relative;
+        }
+
+        .footer-text {
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: normal;
+            left: 300px;
+            color: #fefad5;
+            font-size: 46px;
+            white-space: pre;
+            top: 87px;
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="navbar-content">
+                <div class="nav-item">
+                    <p>Home</p>
+                </div>
+                <div class="nav-item">
+                    <p>About Me</p>
+                </div>
+                <div class="ab-image-container">
+                    <div class="ab-image">
+                        <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/221223359da4431af543157211a2911ee63f2ef0" alt="">
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <p>Works</p>
+                </div>
+                <div class="nav-item">
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-left">
+                <div class="hero-title">
+                    <p>Anisa </p>
+                    <p>Bhayani</p>
+                </div>
+                <p class="hero-description">A University of Waterloo, Global Business and Digital Arts, student focused on designing interactive, visually compelling experiences that connect design, technology, and meaningful storytelling.</p>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image">
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/74923c01ebabb70523bfb1f0b25dfe20f264859a" alt="">
+                </div>
+                <p class="hero-placeholder-text">IMAGE PLACEHOLDER</p>
+                <div class="hero-vector">
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2ac4a2efc97bf1202cc4980882d57b9c37ae0f9a" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="about-section">
+            <div class="about-content">
+                <div class="about-left">
+                    <p class="about-title">About Me</p>
+                    <p class="about-subtitle">YOU'VE COME TO THE RIGHT PLACE</p>
+                    <div class="about-photos">
+                        <div class="photo-frame-1">
+                            <div class="photo-frame-1-inner">
+                                <div class="photo-1">
+                                    <div class="photo-1-img-wrapper">
+                                        <img src="IMG_6B25B6848692-1.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-frame-2">
+                            <div class="photo-frame-2-inner">
+                                <div class="photo-2">
+                                    <div class="photo-2-img-wrapper">
+                                        <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f4adc83cc6f8ee13e338df27101678160730cb94" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <p class="about-greeting">Hi, I'm Anisa!</p>
+                    <p class="about-role">STUDENT | SMALL BUSINESS OWNER</p>
+                    <div class="about-bio">
+                        <p>I'm Anisa, a designer and student born in Vancouver and currently studying in Waterloo. Outside of school, I run a small business called Cakes by Anisa, where I bake, design, market, and sell custom treats.</p>
+                        <p>&nbsp;</p>
+                        <p>Balancing university and entrepreneurship has taught me how to move quickly from idea to execution. Whether I'm sketching out a new product, refining a visual identity, or crafting an experience that feels thoughtful and personal. At the core of everything I do is a love for building things that make people feel seen, celebrated, and a little bit delighted.</p>
+                        <p>&nbsp;</p>
+                        <p><a href="#contact">Contact Me</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Section -->
+        <div class="location-section">
+            <div class="location-item">
+                <p class="location-text">VANCOUVER, BC</p>
+            </div>
+            <div class="location-item">
+                <p class="location-text">TORONTO, ON</p>
+            </div>
+            <div class="location-item">
+                <p class="location-text">WATERLOO, ON</p>
+            </div>
+        </div>
+
+        <!-- Quote Section -->
+        <div class="quote-section">
+            <div class="quote-content">
+                <div class="quote-bg">
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e5fa75845aa22ceac00aacb7625fe295bef5a986" alt="">
+                    <div class="quote-overlay"></div>
+                </div>
+                <div class="quote-text">
+                    <p>"Let the beauty of </p>
+                    <p>what you love </p>
+                    <p>be what you do"</p>
+                </div>
+                <p class="quote-author">-RUMI</p>
+            </div>
+        </div>
+
+        <!-- Works Section -->
+        <div class="works-section">
+            <div class="works-content">
+                <p class="section-title">Works</p>
+                
+                <!-- Work Item 1 - Image Left, Text Right -->
+                <div class="work-item" style="margin-top: 44px;">
+                    <div class="work-image-container">
+                        <div class="work-image">
+                            <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ce945de7151b9f13bd6eb8fa4bd41fbb4ee4f75f" alt="Place Portrait">
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <div class="work-title">
+                            <p>Place Portrait</p>
+                        </div>
+                        <p class="work-text">For this place portrait, I focused on Lazaridis Hall in Waterloo, studying its sharp geometry, glass façade, and how students move through the space. I used simplified forms and a warm, minimal palette to show Lazaridis not just as a business school, but as a social hub. The illustration highlights the bright atrium, layered levels, and everyday circulation patterns, turning an academic building into a snapshot of energetic campus life.</p>
+                    </div>
+                </div>
+
+                <!-- Work Item 2 - Text Left, Image Right -->
+                <div class="work-item reverse">
+                    <div class="work-image-container">
+                        <div class="work-image">
+                            <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fc00765236b34534a31037301c297864afa0697d" alt="Website Re-design">
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <p class="work-title">Website Re-design</p>
+                        <p class="work-text">I redesigned Silver Valet Dental Care's website to feel warmer and more trustworthy while making it easier for patients to find what they need. I simplified the navigation, clarified services and CDCP information, and added clear calls-to-action. The new layout uses a soft, modern colour palette, improved typography, and consistent components to create a calm, professional experience across desktop and mobile.</p>
+                    </div>
+                </div>
+
+                <!-- Work Item 3 - Image Left, Text Right -->
+                <div class="work-item">
+                    <div class="work-image-container">
+                        <div class="work-image">
+                            <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3a5e5958021f0bb9ac9bf137447a0b3f03169b69" alt="Campus Community App">
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <p class="work-title">Campus Community App</p>
+                        <p class="work-text">For this case competition, my team and I designed a community app that helps Ismaili Muslim students stay connected no matter which college or university they attend. The platform organizes students into campus- and city-based spaces, with event calendars, mentorship matching, and support channels for newcomers and underrepresented groups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Volunteering Section -->
+        <div class="volunteering-section">
+            <div class="volunteering-content">
+                <p class="section-title">Volunteering</p>
+                
+                <!-- Volunteer Item 1 - Image Left, Text Right -->
+                <div class="work-item" style="margin-top: 44px;">
+                    <div class="work-image-container">
+                        <div class="work-image">
+                            <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d9950bb784fdeaa7074a866969e08faf2a450758" alt="ALC learning center teacher">
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <p class="work-title">ALC learning center teacher</p>
+                        <p class="work-text">I volunteered as an English teacher at an Advanced Learning Center, working with Grade 5 students to build confidence and do better in school. I planned lessons on reading, writing, and vocabulary, and used games and small-group activities to keep them engaged. Through regular practice and feedback, I focused on helping each student strengthen their skills so they could participate more comfortably in class and feel proud of their progress over time.</p>
+                    </div>
+                </div>
+
+                <!-- Volunteer Item 2 - Text Left, Image Right -->
+                <div class="work-item reverse">
+                    <div class="work-image-container">
+                        <div class="work-image">
+                            <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d3d5bd79a69c1d023d8ecba8458fadb99f686a54" alt="Encounters TedEd Club Administrator">
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <p class="work-title">Encounters TedEd Club Administrator</p>
+                        <p class="work-text">I was an administrator for the Encounters TED-Ed Club in Vancouver, where I helped organize meetings, plan workshops, and guide students through the process of turning their ideas into TedTalks. While supporting others, I also developed and delivered my own talk on ethnocentrism, exploring how our cultural lens shapes the way we see the world.</p>
+                    </div>
+                </div>
+
+                <!-- Volunteer Item 3 - Image Left, Text Right -->
+                <div class="work-item">
+                    <div class="work-image-container">
+                        <div class="work-image">
+                            <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/15c752d49b5c3114bb52ed99c714882ec8d1c7ad" alt="3PointRevelation Website">
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <div class="work-title">
+                            <p>3PointRevelation Website</p>
+                        </div>
+                        <p class="work-text">Beyond school, I volunteered as part of the Three Point Revelation project, an online student initiative focused on historical injustices, current issues, and future solutions. I started as a writer and later became Senior Writing Manager, leading a small team to plan articles, edit drafts, and keep our website content consistent and thoughtful. The role helped me grow as a collaborator and communicator while connecting with students from around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section" id="contact">
+            <div class="contact-content">
+                <p class="section-title">Contact</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-text">
+                <p>(604) 671 -4858</p>
+                <p>a3bhayan@uwaterloo.ca</p>
+                <p>University of Waterloo, GBDA '29</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
