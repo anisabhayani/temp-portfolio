@@ -631,24 +631,23 @@
         }
 
         /* Footer */
-        .footer {
-            background-color: #264732;
-            height: 357px;
-            width: 1796px;
-            position: relative;
-        }
+.footer {
+    background-color: #264732;
+    width: 100%;          /* stretch across the page */
+    padding: 50px 0;      /* let height grow with content */
+    display: flex;
+    justify-content: center;
+}
 
-        .footer-text {
-            position: absolute;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            line-height: normal;
-            left: 300px;
-            color: #fefad5;
-            font-size: 46px;
-            white-space: pre;
-            top: 87px;
-        }
+.footer-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #fefad5;
+    font-size: 32px;
+    text-align: center;   /* center align all three lines */
+}
+
     </style>
 </head>
 <body>
@@ -664,7 +663,8 @@
                 </div>
                 <div class="ab-image-container">
                     <div class="ab-image">
-                        <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/221223359da4431af543157211a2911ee63f2ef0" alt="">
+                        <img src="ab logo.png
+" alt="">
                     </div>
                 </div>
                 <div class="nav-item">
